@@ -6,7 +6,7 @@
     $email = $_POST['email'];
     if(isset($_POST['submit']))
     {
-        $body1 = "hello";
+        $body1 = "https://achu1998.github.io/org/pages/resetpassword.html";
         $x=explode("@",$email);
         sent($body1,$c,$x[0]);
  
@@ -26,9 +26,9 @@
   $mail->IsHTML(true);
 
   $mail->Username = "ashweenr1998@gmail.com";
-  $mail->Password = "A*sh1998";
+  $mail->Password = "nishan1093";
   $mail->SetFrom('ashweenr1998@gmail.com', 'QCS Web App');
-  $mail->Subject = "A Transactional Email From Web App from admin";
+  $mail->Subject = "reset link";
   $mail->MsgHTML($body);
   $mail->AddAddress($address, $name);
   
