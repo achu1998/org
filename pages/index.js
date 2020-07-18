@@ -1,6 +1,6 @@
 function sendEmail() {
             Email.send({
-                Host: "smtp.gmail.com",
+                Host: "smtp.mailtrap.com",
                 Username : "crazyideaz1998@gmail.com",
                 Password : "A*sh1998",
                 To : "crazyideaz1998@gmail.com",
