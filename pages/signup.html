@@ -40,7 +40,8 @@
           <form action="#" method="POST">
           <input id="name" name="name" placeholder="Name" required="" ><br><br>
          <input id="emaill" name="email" placeholder="Email" required="" ><br><br>
-         <input id="phone" name="phone" placeholder="Phone no" required="" ><br><br>
+         <input id="phone" name="phone" placeholder="Phone no" pattern="^\d{10}$"
+           required="required" ><br><br>
          <input name="password" placeholder="Password" id="password" type="password" onkeyup='check();' /><br><br>
          <input type="password" placeholder="Confirm Password" name="confirm_password" id="confirm_password"  onkeyup='check();' /><br>
          <span id='message'></span><br>
