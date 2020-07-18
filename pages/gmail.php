@@ -23,7 +23,7 @@
  	$mail->IsHTML(true);
 
  	$mail->Username = "ashweenr1998@gmail.com";
- 	$mail->Password = "A*sh1998";
+ 	$mail->Password = "nishan1093";
  	$mail->SetFrom('ashweenr1998@gmail.com', 'QCS Web App');
  	$mail->Subject = "A Transactional Email From Web App from admin";
  	$mail->MsgHTML($body);
