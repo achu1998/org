@@ -19,7 +19,7 @@
  	$mail->SMTPAuth = true;
  	$mail->SMTPSecure = 'tls';
  	$mail->Host = "smtp.gmail.com";
- 	$mail->Port = 587;
+ 	$mail->Port = 465;
  	$mail->IsHTML(true);
 
  	$mail->Username = "ashweenr1998@gmail.com";
