@@ -31,18 +31,6 @@
         
     </head>
     <body class="m-0 p-0">
-      <script type="text/javascript">
-          var check = function() {
-  if (document.getElementById('password').value ==
-    document.getElementById('confirm_password').value) {
-    document.getElementById('message').style.color = 'green';
-    document.getElementById('message').innerHTML = 'matching';
-  } else {
-    document.getElementById('message').style.color = 'red';
-    document.getElementById('message').innerHTML = 'not matching';
-  }
-}
-        </script>
       <div class="container">
                 <div class="page-header pt-5 px-5">
         <h2 class="h2 px-5 mt-5 mb-3" style="text-align: center;">
@@ -57,7 +45,19 @@
          <input type="password" placeholder="Confirm Password" name="confirm_password" id="confirm_password"  onkeyup='check();' /> <br>
                <button style="width: 150px; margin: 0 auto;"  type="submit" name="submit" value="Log In" class="btn btn-dark border-0 shadow-none bg-org-red btn-lg h6 px-3 mt-3" href="#"><span class="mx-3">Sign Up</span></button>
       </form>
-        </center>        
+        </center>    
+        <script type="text/javascript">
+          var check = function() {
+  if (document.getElementById('password').value ==
+    document.getElementById('confirm_password').value) {
+    document.getElementById('message').style.color = 'green';
+    document.getElementById('message').innerHTML = 'matching';
+  } else {
+    document.getElementById('message').style.color = 'red';
+    document.getElementById('message').innerHTML = 'not matching';
+  }
+}
+        </script>    
                
         </div>
         </div>
