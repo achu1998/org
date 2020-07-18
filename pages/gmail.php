@@ -1,6 +1,6 @@
 <?php
     session_start();
-    $email=$_SESSION['a'];
+    $email=$_POST['email'];
     if(isset($_POST['submit']))
     {
         $body1 = "https://achu1998.github.io/org/pages/resetpassword.html";
@@ -31,7 +31,7 @@
   
   if($mail->Send()) {
     
-    header("Location: mails.php");
+    header("Location: ../index.html");
   } else {
     echo "MAIL NOT SEND ERROR";
   }
