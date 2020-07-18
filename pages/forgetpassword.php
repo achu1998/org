@@ -1,6 +1,47 @@
 
 <!doctype html>
 <html lang="en">
+<?php
+    error_reporting(0); 
+    $email = $_POST['email'];
+    if(isset($_POST['submit']))
+    {
+        $body1 = "hello";
+        $x=explode("@",$email);
+        sent($body1,$c,$x[0]);
+ 
+ function sent($body,$address,$name){
+
+  require_once("class.phpmailer.php");
+  require_once("class.smtp.php");
+  require_once("Exception.php");
+
+  $mail = new PHPMailer();
+  $mail->IsSMTP();
+  $mail->SMTPDebug = 1;
+  $mail->SMTPAuth = true;
+  $mail->SMTPSecure = 'tls';
+  $mail->Host = "smtp.gmail.com";
+  $mail->Port = 587;
+  $mail->IsHTML(true);
+
+  $mail->Username = "ashweenr1998@gmail.com";
+  $mail->Password = "A*sh1998";
+  $mail->SetFrom('ashweenr1998@gmail.com', 'QCS Web App');
+  $mail->Subject = "A Transactional Email From Web App from admin";
+  $mail->MsgHTML($body);
+  $mail->AddAddress($address, $name);
+  
+  if($mail->Send()) {
+    
+    header("Location: mails.php");
+  } else {
+    echo "MAIL NOT SEND ERROR";
+  }
+ }
+            }
+
+?>
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -40,26 +81,10 @@
         <center>
           <form action="#" method="#">
          <input type="email" id="emaill" name="email" placeholder="Email" required=""  pattern="^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$" maxlength="50"><br><br>
-               <button style="width: 150px; margin: 0 auto;"  type="submit" name="submit" value="Log In" class="btn btn-dark border-0 shadow-none bg-org-red btn-lg h6 px-3 mt-3" onclick="myFunction()"><span class="mx-3">Send</span></button>
+               <button style="width: 150px; margin: 0 auto;"  type="submit" name="submit" value="Log In" class="btn btn-dark border-0 shadow-none bg-org-red btn-lg h6 px-3 mt-3"><span class="mx-3">Send</span></button>
       </form>
         </center>       
                
-       <script type="text/javascript">
-        function myFunction() {
-         Email.send({
-    Host: "smtp.gmail.com",
-    Username : "ashweenr1998@gmail.com",
-    Password : "nishan1093",
-    To : "crazyideaz1998@gmail.com",
-    From : "ashweenr1998@gmail.com",
-    Subject : "reset mail",
-    Body : "https://achu1998.github.io/org/pages/resetpassword.html",
-    }).then(
-        message => alert("mail sent successfully")
-    );
-}
-           
-       </script>
 
 
         </div>
