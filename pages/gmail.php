@@ -6,7 +6,6 @@
   require_once("Exception.php");
 
   $mail = new PHPMailer(); 
-$mail->IsSMTP(); 
 $mail->SMTPDebug = 1; 
 $mail->SMTPAuth = true; 
 $mail->SMTPSecure = 'tls'; 
