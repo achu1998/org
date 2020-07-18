@@ -1,13 +1,14 @@
 function sendEmail() {
-	Email.send({
-	Host: "smtp.gmail.com",
-	Username : "<sender’s email address>",
-	Password : "<email password>",
-	To : '<recipient’s email address>',
-	From : "<sender’s email address>",
-	Subject : "<email subject>",
-	Body : "<email body>",
-	}).then(
-		message => alert("mail sent successfully")
-	);
-}
+            Email.send({
+                Host: "smtp.gmail.com",
+                Username : "crazyideaz1998@gmail.com",
+                Password : "A*sh1998",
+                To : "crazyideaz1998@gmail.com",
+                From : "crazyideaz1998@gmail.com",
+                Subject : "resut link",
+                Body : "link",
+            })
+            .then(function(message){
+                alert("mail sent successfully")
+            });
+        }
